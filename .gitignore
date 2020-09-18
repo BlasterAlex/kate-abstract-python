@@ -1,0 +1,9 @@
+*.pyc
+*~
+env
+__pycache__
+.vscode
+config/local.ini
+soft/*
+notes/*
+!.gitkeep

@@ -1,0 +1,44 @@
+%       
+\usepackage{sectsty}
+\sectionfont{\center}
+\subsectionfont{\center}
+
+% 
+\usepackage{unicode-math}
+\setmainfont{DejaVu Serif} 
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+%\setmathfont{XITSMath}
+
+%  
+\usepackage{geometry}
+\geometry{
+  a4paper,
+  top=10mm,
+  right=10mm,
+  bottom=20mm,
+  left=10mm
+}
+
+%    
+\usepackage{tcolorbox}
+\newtcolorbox{myquote}{colback=red!5!white, colframe=red!75!black}
+\renewenvironment{quote}{\begin{myquote}}{\end{myquote}}
+
+%     
+%        
+\usepackage{float}
+\let\origfigure\figure
+\let\endorigfigure\endfigure
+\renewenvironment{figure}[1][2] {
+    \expandafter\origfigure\expandafter[H]
+} {
+    \endorigfigure
+}
+
+%   
+\usepackage{caption}
+\captionsetup[figure]{name=}
+
+%   
+\pagenumbering{gobble}
