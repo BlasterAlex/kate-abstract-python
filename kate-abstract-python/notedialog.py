@@ -26,10 +26,14 @@ from pylovepdf.ilovepdf import ILovePdf
 from requests.exceptions import ConnectionError
 
 
+# Чтение файла с ключом
+ilovepdfFile = open(os.path.join("config", "ilovepdf"), "r+")
+ProjectKey = ilovepdfFile.readline().strip()
+ilovepdfFile.close()
+
 # Чтение конфиг файла
 config = configparser.ConfigParser()
-config.read([os.path.join("config", "local.ini"), os.path.join("config", "config.ini")])
-ProjectKey = config["DEFAULT"]["ProjectKey"]
+config.read(os.path.join("config", "config.ini"))
 mainSection = config["DEFAULT"]["mainSection"]
 styleFile = config["DEFAULT"]["styleFile"]
 

@@ -3,6 +3,6 @@
 env
 __pycache__
 .vscode
-config/local.ini
+ilovepdf
 notes/*
 !.gitkeep
